@@ -1,0 +1,39 @@
+{
+  "country": [
+    {
+      "id": 1,
+      "name": "Vietnam vô địch",
+      "capital": "Hà Nội"
+    },
+    {
+      "id": 2,
+      "name": "Korea",
+      "capital": "Seoul"
+    },
+    {
+      "id": 3,
+      "name": "Laos",
+      "capital": "Vieng"
+    },
+    {
+      "name": "Cambodia",
+      "capital": "Phnôm Pênh",
+      "id": 4
+    },
+    {
+      "name": "America",
+      "capital": "Washington",
+      "id": 5
+    },
+    {
+      "name": "Japan",
+      "capital": "Tokyo",
+      "id": 6
+    },
+    {
+      "name": "Germany",
+      "capital": "Berlin",
+      "id": 7
+    }
+  ]
+}
