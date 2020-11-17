@@ -33,22 +33,22 @@ function App() {
 	}
 
 	
-	const handleChange=e=>{
+	const handleChange = e =>{
 		const {name, value}=e.target;
 		setCountrySelect((prevState)=>({...prevState,[name]: value}));
 	  }
 	
-	const edit = () =>{
-		var dataNueva=data;
-		dataNueva.map(country=>{
-			if(country.id===countrySelect.id){
-			country.capital=countrySelect.capital;
-			country.name=countrySelect.name;
-			}
-		});
-		setData(dataNueva);
-		setModelEdit(false);
-	}
+	// const edit = () =>{
+	// 	var dataNueva=data;
+	// 	dataNueva.map(country=>{
+	// 		if(country.id===countrySelect.id){
+	// 		country.capital=countrySelect.capital;
+	// 		country.name=countrySelect.name;
+	// 		}
+	// 	});
+	// 	setData(dataNueva);
+	// 	setModelEdit(false);
+	// }
 
 	const update = () => {
 		data.map(country => {
@@ -65,6 +65,7 @@ function App() {
 	const remove = () => {
 		const resp = axios.delete(`http://localhost:3001/country/${countrySelect.id}`)
 		setModelDelete(false);
+		setData(data.filter(country => country.id !== countrySelect.id));
 	}
 	
 	const onInsert = () => {
@@ -77,6 +78,7 @@ function App() {
 		country.id=data[data.length-1].id+1;
 		let json = await axios.post("http://localhost:3001/country", country);
 		setModelInsert(false);
+		setData(data => [...data, country]);
 	}
 	return (
 		<div className="App">
@@ -122,6 +124,7 @@ function App() {
 					type="text"
 					name="id"
 					value={countrySelect && countrySelect.id}
+					onChange={handleChange}
 				/>
 				<br />
 	

@@ -34,6 +34,36 @@
       "name": "Germany",
       "capital": "Berlin",
       "id": 7
+    },
+    {
+      "name": "Spain",
+      "capital": "Madrid",
+      "id": 8
+    },
+    {
+      "name": "Russia",
+      "capital": "Moscow",
+      "id": 9
+    },
+    {
+      "name": "France",
+      "capital": "Paris",
+      "id": 10
+    },
+    {
+      "name": "England",
+      "capital": "London",
+      "id": 11
+    },
+    {
+      "name": "Brazil",
+      "capital": "Brasilia",
+      "id": 12
+    },
+    {
+      "name": "Ukraine",
+      "capital": "Kiev",
+      "id": 13
     }
   ]
 }
